@@ -1,0 +1,82 @@
+Create a modern, professional, single-page personal website for a IT DEV professional with the following details:
+
+Personal Info:
+Name: Alok Gupta
+#Age: 37
+#Phone: +91 7067 920 938
+Email: alokik@zohomail.in
+Location: Pune, Maharashtra
+Tagline: "Helping you find the right credit card for your lifestyle"
+
+Professional Summary:
+Senior Software Developer with 8+ years of experience building scalable, high-performance enterprise systems using Java,
+Spring Boot, and Microservices. Strong expertise in system design, software architecture patterns, data structures &
+algorithms, and performance optimization. Proven track record leading Agile teams, mentoring developers, and delivering
+production-ready solutions with measurable business impact. Currently upskilling in AI/ML through IIT Hyderabad.
+
+Experineces:
+Senior Project Associate, Cognizant
+Present, Pune, India
+
+• Implemented encryption for sensitive data using AES-256 at rest and TLS 1.2+ in transit, reducing data
+exposure risk by 70% and meeting security compliance standards.
+• Led Scrum ceremonies for cross-functional teams, driving sprint planning, daily standups, and retrospectives to
+ensure predictable, on-time delivery of enterprise features.
+• Architected production support framework establishing component ownership, reducing incident response time
+and improving system stability across multiple environments.
+• Enabled stateless, secure microservice communication with Spring Security OAuth2/JWT, achieving 99.9%
+request validation success.
+• Minimized data inconsistency incidents by 40% by implementing eventual consistency using Saga pattern
+and asynchronous events.
+• Improved service availability by 30% by implementing Circuit Breaker pattern, improving system resilience
+and fault isolation and preventing cascading failures in distributed services.
+Senior Software Developer
+Capgemini Engineering
+Remote
+• Designed and developed enterprise-grade microservices using Java and Spring Boot, supporting high-availability
+backend systems serving 100K+ daily transactions.
+• Improved code maintainability and extensibility by 40% by applying SOLID principles and object-oriented
+design patterns across core services.
+• Deployed Redis caching to optimize API performance, resulting in a remarkable 25% reduction in latency and
+significantly decreased response time.
+• Reduced database query latency by 50% through query optimization, indexing, and efficient join strategies.
+• Collaborated closely with cross-functional teams (developers, QA, product managers) in Agile/Scrum environments
+to deliver features on time and at scale.
+Software Engineering Analyst
+Accenture
+Bengaluru, India
+• Developed RESTful APIs using Spring Boot achieving 20% faster response times by optimizing database
+queries and leveraging asynchronous processing for non-blocking operations.
+• Engineered core Java algorithms in Accenture Technology Labs (R&D), contributing to performance optimization
+and reusable framework components.
+• Implemented custom business logic using Apex on Salesforce platform for Target Canada, automating workflows
+and reducing manual processing by 60%.
+• Awarded Client Appreciation Certificate for exceptional delivery quality and technical excellence.
+
+Technical Skills
+Languages: Java, Python (Learning)
+Frameworks & Technologies: Spring Boot, Spring Security, Microservices, Hibernate, AWS, Git
+Databases: SQL and NoSQL
+Coursework: System Design, Data Structure and Algorithms, Design Pattern, Design Principles, CSM
+
+Education:
+B.Tech from Dr. MGR Educational and Research Institute, Chennai | 2010
+
+Certifications:
+AWS Certified Cloud Practitioner | Certified ScrumMaster (CSM) | Salesforce Platform Developer I | Generative AI
+Fundamentals | Agile & Scrum Project Management | Client Appreciation Award (Accenture)
+
+*******************************************************************************************************************
+
+Design Instruction
+- Light, executive layout with a warm off-white (#F5F1EB) background, charcoal grey (#2D2D2D) text, and muted gold (#B8956A) as the accent color
+- Use a serif font for headings (like Playfair Display) and a clean sans-serif for body text (like Inter or Lato)
+- Hero section with a soft gradient background (cream to light grey), name, tagline, and a rounded CTA button ("Let's Connect") in muted gold
+Sections: About Me → Experience → Skills → Education → Contact
+Experience section styled as a vertical timeline with gold accent dots
+Skills displayed as minimal pill-shaped tags with light borders instead of progress bars
+Mobile responsive
+Subtle fade-in animations on scroll - nothing flashy
+Contact section with clickable phone and email links
+Simple contact form (Name, Phone, Message) with soft rounded input fields and a gold submit button
+Overall vibe: think luxury bank brochure - clean whitespace, understated elegance, no loud colors
