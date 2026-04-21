@@ -291,7 +291,7 @@
   }
 
   /* ─── ABOUT ─── */
-  #about { background: var(--white); }
+  #about { background: var(--white); padding: 6rem 2rem; }
 
   .about-grid {
     display: grid;
@@ -363,8 +363,31 @@
 
   .info-card-content a:hover { color: var(--gold); }
 
+  .profile-image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profile-image {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(184,149,106,0.2);
+    border: 2px solid var(--gold-light);
+    object-fit: cover;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .profile-image:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 50px rgba(184,149,106,0.3);
+  }
+
   /* ─── EXPERIENCE ─── */
-  #experience { background: var(--bg); }
+  #experience { background: var(--white); }
 
   .timeline {
     position: relative;
@@ -402,9 +425,10 @@
 
   .timeline-meta {
     display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     flex-wrap: wrap;
     gap: 0.6rem;
-    align-items: center;
     margin-bottom: 0.6rem;
   }
 
@@ -413,6 +437,20 @@
     font-size: 1.2rem;
     color: var(--text);
     font-weight: 600;
+    margin: 0;
+  }
+
+  .timeline-company-line {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .timeline-meta-right {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    align-items: center;
   }
 
   .timeline-company {
@@ -470,7 +508,7 @@
   }
 
   /* ─── SKILLS ─── */
-  #skills { background: var(--white); }
+  #skills { background: var(--bg); }
 
   .skills-grid {
     display: grid;
@@ -515,6 +553,187 @@
     border-color: var(--gold-light);
     color: var(--gold);
     background: var(--gold-pale);
+  }
+
+  /* ─── PROJECTS ─── */
+  #projects { background: var(--white); }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+
+  .project-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-card:hover {
+    box-shadow: 0 8px 32px rgba(184,149,106,0.15);
+    transform: translateY(-4px);
+    border-color: var(--gold-light);
+  }
+
+  .project-header {
+    margin-bottom: 1rem;
+  }
+
+  .project-header h3 {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    color: var(--text);
+    margin-bottom: 0.8rem;
+  }
+
+  .project-tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    padding: 0.35rem 0.8rem;
+    border-radius: 30px;
+    background: var(--gold-pale);
+    color: var(--gold);
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  .project-desc {
+    font-size: 0.92rem;
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+  }
+
+  .project-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .stack-item {
+    display: inline-block;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    padding: 0.4rem 0.8rem;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    color: var(--text-light);
+    background: var(--white);
+  }
+
+  /* ─── SERVICES ─── */
+  #services { background: var(--bg); }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+  }
+
+  .service-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: all 0.3s;
+  }
+
+  .service-card:hover {
+    box-shadow: 0 12px 40px rgba(184,149,106,0.12);
+    transform: translateY(-6px);
+    border-color: var(--gold-light);
+  }
+
+  .service-icon {
+    font-size: 2.8rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .service-card h3 {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    color: var(--text);
+    margin-bottom: 0.8rem;
+  }
+
+  .service-card p {
+    font-size: 0.91rem;
+    color: var(--text-light);
+    line-height: 1.8;
+  }
+
+  /* ─── BLOGS ─── */
+  #blogs { background: var(--white); }
+
+  .blogs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+
+  .blog-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s;
+    position: relative;
+  }
+
+  .blog-card:hover {
+    box-shadow: 0 8px 32px rgba(184,149,106,0.15);
+    transform: translateY(-4px);
+    border-color: var(--gold-light);
+  }
+
+  .blog-date {
+    display: inline-block;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+  }
+
+  .blog-card h3 {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    color: var(--text);
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .blog-card p {
+    font-size: 0.91rem;
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+
+  .blog-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.8rem;
+    color: var(--text-light);
+  }
+
+  .blog-read-time {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    background: var(--gold-pale);
+    color: var(--gold);
+    border-radius: 20px;
+    font-weight: 600;
   }
 
   /* ─── EDUCATION & CERTS ─── */
@@ -582,7 +801,7 @@
   }
 
   /* ─── CONTACT ─── */
-  #contact { background: var(--white); }
+  #contact { background: var(--bg); }
 
   .contact-grid {
     display: grid;
@@ -742,12 +961,48 @@
   .reveal-delay-3 { transition-delay: 0.3s; }
   .reveal-delay-4 { transition-delay: 0.4s; }
 
+  /* ─── GO TO TOP ─── */
+  .to-top-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--gold);
+    color: var(--white);
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 99;
+    box-shadow: 0 4px 20px rgba(184,149,106,0.3);
+  }
+
+  .to-top-btn.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .to-top-btn:hover {
+    background: #A07C54;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 28px rgba(184,149,106,0.4);
+  }
+
   /* ─── RESPONSIVE ─── */
   @media (max-width: 900px) {
     .hero-inner { grid-template-columns: 1fr; text-align: center; }
     .hero-badge { display: none; }
     .hero-actions { justify-content: center; }
     .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .projects-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .services-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .blogs-grid { grid-template-columns: 1fr; gap: 1.5rem; }
     .edu-grid { grid-template-columns: 1fr; gap: 2rem; }
     .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
     .form-row { grid-template-columns: 1fr; }
@@ -779,10 +1034,13 @@
   <div class="nav-logo">Alok <span>Gupta</span></div>
   <ul class="nav-links" id="navLinks">
     <li><a href="#about">About</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <!--<li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>-->
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#blogs">Blogs</a></li>
+    <!--li><a href="#education">Education</a></li-->
+    <li><a href="#contact">Connect</a></li>
   </ul>
   <div class="nav-toggle" id="navToggle" aria-label="Toggle menu">
     <span></span><span></span><span></span>
@@ -824,33 +1082,78 @@
         <p>Currently, I am expanding my horizons through an AI/ML programme at IIT Hyderabad — bringing an engineer's rigour to the next frontier of intelligent systems.</p>
       </div>
       <div class="about-sidebar">
-        <div class="info-card reveal reveal-delay-1">
-          <div class="info-card-icon">📍</div>
-          <div class="info-card-content">
-            <span class="label">Location</span>
-            <span class="value">Pune, Maharashtra, India</span>
-          </div>
+        <div class="profile-image-container reveal">
+          <img src="images/linkedin-profile.jpeg" alt="Alok Gupta - LinkedIn Profile" class="profile-image">
         </div>
-        <div class="info-card reveal reveal-delay-2">
-          <div class="info-card-icon">✉️</div>
-          <div class="info-card-content">
-            <span class="label">Email</span>
-            <span class="value"><a href="mailto:alokik@zohomail.in">alokik@zohomail.in</a></span>
-          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-inner">
+    <span class="section-label reveal">Expertise</span>
+    <h2 class="section-title reveal">Technical Skills</h2>
+    <div class="divider reveal"></div>
+    <div class="skills-grid">
+      <div class="skill-group reveal">
+        <h3>Languages</h3>
+        <div class="skill-tags">
+          <span class="tag highlight">Java</span>
+          <span class="tag">SQL</span>
         </div>
-        <div class="info-card reveal reveal-delay-3">
-          <div class="info-card-icon">🎓</div>
-          <div class="info-card-content">
-            <span class="label">Education</span>
-            <span class="value">B.Tech — Dr. MGR Institute, Chennai</span>
-          </div>
+      </div>
+      <div class="skill-group reveal reveal-delay-1">
+        <h3>Frameworks & Technologies</h3>
+        <div class="skill-tags">
+          <span class="tag highlight">Spring Boot</span>
+          <span class="tag highlight">Spring Security</span>
+          <span class="tag">Spring AOP</span>
+          <span class="tag">Spring Actuator</span>
+          <span class="tag">Microservices</span>
+          <span class="tag">Hibernate</span>
+          <span class="tag">OAuth2 / JWT</span>
+          <span class="tag">Redis</span>
+          <span class="tag">REST APIs</span>
+          <span class="tag">Kafka</span>
         </div>
-        <div class="info-card reveal reveal-delay-4">
-          <div class="info-card-icon">🤖</div>
-          <div class="info-card-content">
-            <span class="label">Currently Learning</span>
-            <span class="value">AI/ML — IIT Hyderabad</span>
-          </div>
+      </div>
+      <div class="skill-group reveal reveal-delay-2">
+        <h3>Architecture & Patterns</h3>
+        <div class="skill-tags">
+          <span class="tag highlight">System Design</span>
+          <span class="tag">Saga Pattern</span>
+          <span class="tag">Circuit Breaker</span>
+          <span class="tag">SOLID Principles</span>
+          <span class="tag">Design Patterns</span>
+          <span class="tag">Design Principles</span>
+          <span class="tag">Distributed Systems</span>
+          <span class="tag">Event Driven Architecture</span>
+        </div>
+      </div>
+      <div class="skill-group reveal reveal-delay-3">
+        <h3>Cloud, Databases & Tools</h3>
+        <div class="skill-tags">
+          <span class="tag highlight">AWS</span>
+          <span class="tag">NoSQL</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">Git</span>
+          <span class="tag">Swagger</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Jenkins</span>
+          <span class="tag">Datadog</span>
+          <span class="tag">Kibana</span>
+        </div>
+      </div>
+      <div class="skill-group reveal reveal-delay-3">
+        <h3>AI & Tools</h3>
+        <div class="skill-tags">
+          <span class="tag highlight">Cursor AI</span>
+          <span class="tag">Ollama</span>
+          <span class="tag">Github Co-pilot</span>
+          <span class="tag">Claude Code</span>
+          <span class="tag">N8N</span>
         </div>
       </div>
     </div>
@@ -869,8 +1172,10 @@
         <div class="timeline-dot"></div>
         <div class="timeline-meta">
           <span class="timeline-role">Senior Project Associate</span>
+          <span class="timeline-period">2024 - Present · Pune, India</span>
+        </div>
+        <div class="timeline-company-line">
           <span class="timeline-company">Cognizant</span>
-          <span class="timeline-period">Present · Pune, India</span>
         </div>
         <ul>
           <li>Implemented <strong>AES-256 encryption</strong> at rest and TLS 1.2+ in transit, reducing data exposure risk by <strong>70%</strong> and achieving full security compliance.</li>
@@ -886,8 +1191,10 @@
         <div class="timeline-dot"></div>
         <div class="timeline-meta">
           <span class="timeline-role">Senior Software Developer</span>
+          <span class="timeline-period">2022 - 2024 · Remote</span>
+        </div>
+        <div class="timeline-company-line">
           <span class="timeline-company">Capgemini Engineering</span>
-          <span class="timeline-period">Remote</span>
         </div>
         <ul>
           <li>Designed and developed enterprise-grade microservices using <strong>Java and Spring Boot</strong>, supporting high-availability backends serving <strong>100K+ daily transactions</strong>.</li>
@@ -902,8 +1209,10 @@
         <div class="timeline-dot"></div>
         <div class="timeline-meta">
           <span class="timeline-role">Software Engineering Analyst</span>
+          <span class="timeline-period">2011 - 2016 · Bengaluru, India</span>
+        </div>
+        <div class="timeline-company-line">
           <span class="timeline-company">Accenture</span>
-          <span class="timeline-period">Bengaluru, India</span>
         </div>
         <ul>
           <li>Developed RESTful APIs using Spring Boot, achieving <strong>20% faster response times</strong> through async processing and query optimisation.</li>
@@ -913,59 +1222,6 @@
         </ul>
       </div>
 
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills">
-  <div class="section-inner">
-    <span class="section-label reveal">Expertise</span>
-    <h2 class="section-title reveal">Technical Skills</h2>
-    <div class="divider reveal"></div>
-    <div class="skills-grid">
-      <div class="skill-group reveal">
-        <h3>Languages</h3>
-        <div class="skill-tags">
-          <span class="tag highlight">Java</span>
-          <span class="tag">Python</span>
-          <span class="tag">SQL</span>
-        </div>
-      </div>
-      <div class="skill-group reveal reveal-delay-1">
-        <h3>Frameworks & Technologies</h3>
-        <div class="skill-tags">
-          <span class="tag highlight">Spring Boot</span>
-          <span class="tag highlight">Spring Security</span>
-          <span class="tag">Microservices</span>
-          <span class="tag">Hibernate</span>
-          <span class="tag">OAuth2 / JWT</span>
-          <span class="tag">Redis</span>
-          <span class="tag">REST APIs</span>
-        </div>
-      </div>
-      <div class="skill-group reveal reveal-delay-2">
-        <h3>Architecture & Patterns</h3>
-        <div class="skill-tags">
-          <span class="tag highlight">System Design</span>
-          <span class="tag">Saga Pattern</span>
-          <span class="tag">Circuit Breaker</span>
-          <span class="tag">SOLID Principles</span>
-          <span class="tag">Design Patterns</span>
-          <span class="tag">Distributed Systems</span>
-        </div>
-      </div>
-      <div class="skill-group reveal reveal-delay-3">
-        <h3>Cloud, Databases & Tools</h3>
-        <div class="skill-tags">
-          <span class="tag highlight">AWS</span>
-          <span class="tag">NoSQL</span>
-          <span class="tag">SQL Databases</span>
-          <span class="tag">Git</span>
-          <span class="tag">Salesforce / Apex</span>
-          <span class="tag">Agile / Scrum</span>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -982,6 +1238,9 @@
         <h3>Bachelor of Technology</h3>
         <div class="sub">Dr. MGR Educational and Research Institute, Chennai</div>
         <div class="year">Graduated 2010</div>
+        <div class="icon">🎓</div>
+        <h3>Currently Learning</h3>
+        <div class="sub">AI/ML, IIT Hyderabad</div>
       </div>
       <div class="edu-card reveal reveal-delay-2">
         <div class="icon">🏅</div>
@@ -999,6 +1258,135 @@
   </div>
 </section>
 
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-inner">
+    <span class="section-label reveal">Portfolio</span>
+    <h2 class="section-title reveal">Featured Projects</h2>
+    <div class="divider reveal"></div>
+    <div class="projects-grid">
+      <div class="project-card reveal">
+        <div class="project-header">
+          <h3>Sentiment Analyzer in Python</h3>
+          <span class="project-tag">Python</span>
+          <span class="project-tag">Machine Learning</span>
+        </div>
+        <p class="project-desc">I created an app which will read the sentiment in a given text file. The output will be shown against the overall emotions detected from the speech in a graphical manner. I used NLTK library for detecting the sentiments/emotions from the text file (speech) and used matplotlib.pyplot for projecting emotions in a graph.</p>
+        <div class="project-stack">
+          <span class="stack-item">Python</span>
+          <span class="stack-item">NLTK</span>
+          <span class="stack-item">Matplotlib</span>
+          <span class="stack-item">Jupyter Notebook</span>
+        </div>
+      </div>
+      <div class="project-card reveal reveal-delay-1">
+        <div class="project-header">
+          <h3>Payment Processing System</h3>
+          <span class="project-tag">System Design</span>
+          <span class="project-tag">Security</span>
+        </div>
+        <p class="project-desc">Built an enterprise-grade payment gateway with AES-256 encryption, OAuth2/JWT authentication, and PCI-DSS compliance. Achieved 70% reduction in security vulnerabilities and 99.9% transaction validation success.</p>
+        <div class="project-stack">
+          <span class="stack-item">Spring Security</span>
+          <span class="stack-item">PostgreSQL</span>
+          <span class="stack-item">Redis</span>
+          <span class="stack-item">AWS</span>
+        </div>
+      </div>
+      <div class="project-card reveal reveal-delay-2">
+        <div class="project-header">
+          <h3>Real-time Analytics Dashboard</h3>
+          <span class="project-tag">Performance</span>
+          <span class="project-tag">Optimization</span>
+        </div>
+        <p class="project-desc">Engineered a high-performance analytics platform processing millions of events per second. Optimized database queries by 50% through indexing and caching strategies, reducing latency significantly.</p>
+        <div class="project-stack">
+          <span class="stack-item">Java</span>
+          <span class="stack-item">Redis</span>
+          <span class="stack-item">NoSQL</span>
+          <span class="stack-item">REST APIs</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-inner">
+    <span class="section-label reveal">What I Offer</span>
+    <h2 class="section-title reveal">Services &amp; Expertise</h2>
+    <div class="divider reveal"></div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon">🏗️</div>
+        <h3>System Architecture</h3>
+        <p>Design scalable, distributed systems with proven architectural patterns. From microservices to event-driven architectures, I help you build systems built to last.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-icon">🔐</div>
+        <h3>Security & Compliance</h3>
+        <p>Implement enterprise-grade security with encryption, OAuth2/JWT authentication, and compliance frameworks. Reduce vulnerabilities by up to 70%.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-icon">⚡</div>
+        <h3>Performance Optimization</h3>
+        <p>Optimize databases, APIs, and application performance. Achieve 50%+ latency reduction through caching, indexing, and architectural improvements.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-icon">👥</div>
+        <h3>Team Leadership</h3>
+        <p>Lead high-performing Agile teams with proven mentoring and delivery excellence. Establish frameworks for scalable, predictable delivery.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-4">
+        <div class="service-icon">🔄</div>
+        <h3>Microservices &amp; APIs</h3>
+        <p>Build resilient microservices and REST APIs using Spring Boot. Implement patterns like Circuit Breaker, Saga, and distributed transactions.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-5">
+        <div class="service-icon">🎓</div>
+        <h3>Technical Mentoring</h3>
+        <p>Mentor developers in system design, software architecture, and best practices. Build strong teams with deep technical knowledge and engineering culture.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOGS -->
+<section id="blogs">
+  <div class="section-inner">
+    <span class="section-label reveal">Knowledge</span>
+    <h2 class="section-title reveal">Latest Insights &amp; Articles</h2>
+    <div class="divider reveal"></div>
+    <div class="blogs-grid">
+      <article class="blog-card reveal">
+        <div class="blog-date">Coming Soon</div>
+        <h3>Understanding Microservices Design Patterns</h3>
+        <p>Deep dive into essential microservices patterns including Circuit Breaker, Saga, and Event Sourcing. Learn when to use each pattern and avoid common pitfalls in distributed systems.</p>
+        <div class="blog-meta">
+          <span class="blog-read-time">~12 min read</span>
+        </div>
+      </article>
+      <article class="blog-card reveal reveal-delay-1">
+        <div class="blog-date">Coming Soon</div>
+        <h3>Building Secure Java Applications: A Practical Guide</h3>
+        <p>Comprehensive guide to implementing security in Java applications. Cover encryption, OAuth2/JWT, input validation, and security best practices for enterprise systems.</p>
+        <div class="blog-meta">
+          <span class="blog-read-time">~15 min read</span>
+        </div>
+      </article>
+      <article class="blog-card reveal reveal-delay-2">
+        <div class="blog-date">Coming Soon</div>
+        <h3>Database Performance Optimization Techniques</h3>
+        <p>Master the art of query optimization, indexing strategies, and caching patterns. Learn techniques that have reduced latency by 50% in production systems.</p>
+        <div class="blog-meta">
+          <span class="blog-read-time">~10 min read</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact">
   <div class="section-inner">
@@ -1010,6 +1398,14 @@
         <h3>Open to opportunities</h3>
         <p>Whether you're looking for a seasoned Java architect, a team lead who can bridge technical depth with delivery excellence, or a collaborator for an exciting new challenge — I'd love to hear from you.</p>
         <div class="contact-links">
+          <a href="https://linkedin.com/in/alokgupta02" target="_blank" rel="noopener noreferrer" class="contact-link">
+            <div class="contact-link-icon" style="background: #0A66C2; color: white;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </div>
+            Alok Gupta
+          </a>
           <a href="mailto:alokik@zohomail.in" class="contact-link">
             <div class="contact-link-icon">✉️</div>
             alokik@zohomail.in
@@ -1048,6 +1444,8 @@
   <p>© 2026 <span>Alok Gupta</span> · All rights reserved</p>
 </footer>
 
+<button id="toTop" class="to-top-btn" aria-label="Go to top">↑</button>
+
 <script>
   // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
@@ -1079,6 +1477,20 @@
       e.target.reset();
     }, 3000);
   }
+
+  // Go to top button
+  const toTopBtn = document.getElementById('toTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) {
+      toTopBtn.classList.add('visible');
+    } else {
+      toTopBtn.classList.remove('visible');
+    }
+  });
+  toTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
 </script>
 </body>
 </html>
